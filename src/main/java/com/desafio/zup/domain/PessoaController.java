@@ -22,14 +22,10 @@ public class PessoaController {
 
     @PostMapping("/pessoas")
     ResponseEntity<Pessoa> addPessoa(@RequestBody @Valid PessoaRequest pessoa) throws Throwable {
-
-
         Pessoa novaPessoa = repository.save(pessoa.toModel());
-        System.out.println(novaPessoa);
         return ResponseEntity
                 .created(new URI("/pessoa/" + novaPessoa.getId()))
                 .body(novaPessoa);
-
     }
 
     @GetMapping("/pessoas")
@@ -68,4 +64,5 @@ public class PessoaController {
         return errors;
     }
 }
+
 

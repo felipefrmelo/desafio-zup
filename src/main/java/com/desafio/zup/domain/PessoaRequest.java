@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 
 public class PessoaRequest {
 
-
     @NotBlank(message = "Nome é obrigatório")
     private String nome;
 

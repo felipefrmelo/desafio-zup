@@ -18,7 +18,6 @@ import javax.validation.Payload;
 @Target({ FIELD})
 @Retention(RUNTIME)
 public @interface UniqueValue {
-
     String message() default "{com.desafio.zup.domain.uniquevalue}";
     Class<?>[] groups() default { };
     Class<? extends Payload>[] payload() default { };
